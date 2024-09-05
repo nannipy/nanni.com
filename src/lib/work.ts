@@ -5,7 +5,7 @@ export const workItems = [
   {
     name: "portfolio website",
     github: "https://github.com/nannipy/nanni-com",
-    link: "https://nanni-com-lq4z-gbpernazza-gmailcoms-projects.vercel.app/",
+    link: "/",
     position: "",
     description:
       "the web app you're looking at right now, built with nextjs, tailwindcss, trpc and supabase. It's very simple but i love it ",
