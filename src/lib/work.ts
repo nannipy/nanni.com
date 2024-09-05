@@ -2,19 +2,12 @@ import { ExperienceItem } from "../app/page";
 
 export const workItems = [
   {
-    name: "datapizza",
-    link: "https://jobs.datapizza.tech",
-    position: "software developer (jun 2023 - present)",
+    name: "the web app you're looking at ",
+    link: "https://nanni-com-lq4z-gbpernazza-gmailcoms-projects.vercel.app/",
+    position: "",
     description:
-      "full stack developer in the biggest tech community in italy (500k+ followers). developing and maintaining various products, using different technologies and frameworks, such as nextjs, django, react, react native, and more.",
-  },
-  {
-    name: "the closer fit",
-    link: "https://thecloserfit.com",
-    position: "co-founder & cto (sept 2023 - present)",
-    description:
-      "a web application that creates custom AI interviews based on the user’s resume and lets the user practice and receive feedback to ace his following job interview. built the application and managing the development team.",
-  },
+      "the web app you're looking at right now, built with nextjs, tailwindcss, trpc and supabase very simple but i love it ",
+  }
   /*
   {
     name: "freelance developer",

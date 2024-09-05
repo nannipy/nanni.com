@@ -1,4 +1,5 @@
 import { projectItems } from "../lib/projects";
+import { workItems } from "../lib/work";
 
 function UpRightArrowIcon() {
   return (
@@ -166,8 +167,12 @@ export default async function Home() {
           I&apos;m a software developer with a passion for building web applications. I&apos;m always looking for new challenges and opportunities to learn and grow.
         </p>
 
-        <div className="prose prose-neutral dark:prose-invert text-sm md:text-base">
+        <div className="prose prose-neutral dark:prose-invert text-sm md:text-base py-2">
+         <div className="flex flex-col-2 gap-4">
+
         <ExperienceSection title="projects" items={projectItems} />
+        <ExperienceSection title="" items={workItems} />
+        </div>
       </div>
     </main>
   );
