@@ -22,22 +22,6 @@ export const projectItems = [
     description:
       "a web app to search for Rick and Morty characters with the ability to filter by gender, species, status, and type.",
   },
-  // {
-  //   name: "utellme",
-  //   link: "https://utellme.app",
-  //   position: "",
-  //   description:
-  //     "a web app to get feedback in the easiest and most efficient way possible. build using nextjs, prisma, typescript and more.",
-  // },
-  /*
-  {
-    name: "my diary",
-    link: "https://github.com/LeonardoTrapani/MyDiary",
-    position: "",
-    description:
-      "a web and mobile app to help schedule your homework and high-school related activities. build using react native, nodejs, svelte and more.",
-  },
-  */
   {
     name: "all projects →",
     link: "https://github.com/nannipy",

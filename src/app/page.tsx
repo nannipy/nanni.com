@@ -1,6 +1,4 @@
-import { api } from "~/trpc/server";
 import { projectItems } from "../lib/projects";
-import { workItems } from "../lib/work";
 
 function UpRightArrowIcon() {
   return (
@@ -165,14 +163,12 @@ export default async function Home() {
         </ul>
 
         <p className="prose prose-neutral dark:prose-invert text-sm md:text-base">
-          I'm a software developer with a passion for building web applications. I'm always looking for new challenges and opportunities to learn and grow.
+          I&apos;m a software developer with a passion for building web applications. I&apos;m always looking for new challenges and opportunities to learn and grow.
         </p>
 
         <div className="prose prose-neutral dark:prose-invert text-sm md:text-base">
         <ExperienceSection title="projects" items={projectItems} />
       </div>
-
-       
     </main>
   );
 }
