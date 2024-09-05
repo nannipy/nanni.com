@@ -3,6 +3,7 @@ import { type Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import {clx} from "~/app/utils"
+import Footer from "~/app/_components/footer"
 
 import { TRPCReactProvider } from "~/trpc/react";
 
@@ -18,7 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={clx(GeistSans.className, GeistMono.className, "bg-black")}>
       <body >
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+          <Footer />
       </body>
     </html>
   );

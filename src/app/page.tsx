@@ -1,6 +1,7 @@
 import { projectItems } from "../lib/projects";
 import { workItems } from "../lib/work";
 
+
 function UpRightArrowIcon() {
   return (
     <svg
@@ -139,13 +140,12 @@ function ExperienceSection({
 }
 
 export default async function Home() {
-
-
   return (
     <main className="flex min-h-screen flex-col justify-left mt-8 md:mt-16 text-white px-4 md:px-8 lg:px-16 xl:px-96">
-      <h1 className="mb-4 text-xl md:text-2xl font-bold tracking-tighter">
-        giovanni battista pernazza
-      </h1>
+     
+        <h1 className="mb-4 text-xl md:text-2xl font-bold tracking-tighter">
+                giovanni battista pernazza        
+        </h1>
 
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2 text-neutral-300  ">
@@ -156,7 +156,7 @@ export default async function Home() {
           <div className="flex items-center gap-2 text-neutral-300 ">
             <WorkIcon />
             <p className="inline-flex">
-              Sviluppatore Software
+              SWE
             </p>
           </div>
         </div>
@@ -200,26 +200,26 @@ export default async function Home() {
               className="flex items-center transition-all hover:text-neutral-100"
               rel="noopener noreferrer"
               target="_blank"
-              href="https://bento.me/nannipernaz"
+              href="https://www.instagram.com/nanni.py/"
             >
-              <p className="mr-1 h-7">bento</p>
+              <p className="mr-1 h-7">instagram</p>
               <UpRightArrowIcon />
             </a>
           </li>
         </ul>
 
-        <p className="prose prose-neutral dark:prose-invert text-sm md:text-base">
+        <p className="prose prose-neutral dark:prose-invert text-sm md:text-base md:mt-4">
           I&apos;m a software developer with a passion for building web applications. I&apos;m always looking for new challenges and opportunities to learn and grow.
         </p>
 
         <div className="prose prose-neutral dark:prose-invert text-sm md:text-base py-2">
-         <div className="flex flex-col-2 gap-4">
-        <div className="max-w-md">
-        <ExperienceSection title="projects" items={projectItems} />
-        </div>
-        <div className="mt-7  max-w-md">
-        <ExperienceSection title=""  items={workItems}  />
-        </div>
+         <div className="flex flex-col-2 md:flex-row gap-4">
+          <div className="flex-1 max-w-md md:max-w-md mt-7">
+            <ExperienceSection title="projects" items={projectItems} />
+          </div>
+          <div className="flex-1 max-w-md md:max-w-md  md:mt-14">
+            <ExperienceSection title=""  items={workItems} />
+          </div>
         </div>
       </div>
     </main>
