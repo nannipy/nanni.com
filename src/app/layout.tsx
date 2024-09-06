@@ -17,7 +17,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={clx(GeistSans.className, GeistMono.className, "bg-black")}>
+    <html lang="en" className={clx(GeistSans.className, GeistMono.className, "bg-black md:px-40")}>
       <body >
           <TRPCReactProvider>{children}</TRPCReactProvider>
           <Footer />

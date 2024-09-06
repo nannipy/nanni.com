@@ -129,7 +129,6 @@ function ExperienceSection({
             >
               < GithubIcon  />
               <p className="ml-2 h-7  underline decoration-wavy"> git</p>
-             
             </a>
           )}
           {index !== items.length - 1 && <div className="mt-6"></div>}
@@ -141,83 +140,80 @@ function ExperienceSection({
 
 export default async function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-left mt-8 md:mt-16 text-white px-4 md:px-8 lg:px-16 xl:px-96">
-     
-        <h1 className="mb-4 text-xl md:text-2xl font-bold tracking-tighter">
-                giovanni battista pernazza        
-        </h1>
+    <main className="flex min-h-screen flex-col justify-left mt-4 sm:mt-8 md:mt-16 text-white px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+      <h1 className="mb-4 text-xl sm:text-2xl font-bold tracking-tighter">
+        giovanni battista pernazza        
+      </h1>
 
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2 text-neutral-300  ">
-            <LocationIcon />
-            <p>Roma, Italia</p>
-          </div>
-
-          <div className="flex items-center gap-2 text-neutral-300 ">
-            <WorkIcon />
-            <p className="inline-flex">
-              SWE
-            </p>
-          </div>
+      <div className="flex flex-col gap-2 mb-4">
+        <div className="flex items-center gap-2 text-neutral-300">
+          <LocationIcon />
+          <p>Roma, Italia</p>
         </div>
 
-        <ul className="font-sm my-2 flex flex-col space-y-2 text-neutral-300 sm:flex-row sm:space-x-4 sm:space-y-0">
-          <li>
-            <a
-              className="flex items-center transition-all hover:text-neutral-100"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="mailto:gb.pernazza@gmail.com"
-            >
-              <p className="mr-1 h-7">email</p>
-              <UpRightArrowIcon />
-            </a>
-          </li>
-          <li>
-            <a
-              className="flex items-center transition-all hover:text-neutral-100"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.linkedin.com/in/giovannibpernazza"
-            >
-              <p className="mr-1 h-7">linkedin</p>
-              <UpRightArrowIcon />
-            </a>
-          </li>
-          <li>
-            <a
-              className="flex items-center transition-all hover:text-neutral-100"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://github.com/nannipy"
-            >
-              <p className="mr-1 h-7">github</p>
-              <UpRightArrowIcon />
-            </a>
-          </li>
-          <li>
-            <a
-              className="flex items-center transition-all hover:text-neutral-100"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.instagram.com/nanni.py/"
-            >
-              <p className="mr-1 h-7">instagram</p>
-              <UpRightArrowIcon />
-            </a>
-          </li>
-        </ul>
+        <div className="flex items-center gap-2 text-neutral-300">
+          <WorkIcon />
+          <p className="inline-flex">SWE</p>
+        </div>
+      </div>
 
-        <p className="prose prose-neutral dark:prose-invert text-sm md:text-base md:mt-4">
-          I&apos;m a software developer with a passion for building web applications. I&apos;m always looking for new challenges and opportunities to learn and grow.
-        </p>
+      <ul className="font-sm my-2 flex flex-wrap gap-4 text-neutral-300">
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="mailto:gb.pernazza@gmail.com"
+          >
+            <p className="mr-1 h-7">email</p>
+            <UpRightArrowIcon />
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/giovannibpernazza"
+          >
+            <p className="mr-1 h-7">linkedin</p>
+            <UpRightArrowIcon />
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com/nannipy"
+          >
+            <p className="mr-1 h-7">github</p>
+            <UpRightArrowIcon />
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.instagram.com/nanni.py/"
+          >
+            <p className="mr-1 h-7">instagram</p>
+            <UpRightArrowIcon />
+          </a>
+        </li>
+      </ul>
 
-        <div className="prose prose-neutral dark:prose-invert text-sm md:text-base py-2">
-         <div className="flex flex-col-2 md:flex-row gap-4">
-          <div className="flex-1 max-w-md md:max-w-md mt-7">
+      <p className="prose prose-neutral dark:prose-invert text-sm sm:text-base mt-4">
+        I&apos;m a software developer with a passion for building web applications. I&apos;m always looking for new challenges and opportunities to learn and grow.
+      </p>
+
+      <div className="prose prose-neutral dark:prose-invert text-sm sm:text-base py-2">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <div className="sm:flex-1 sm:max-w-md mt-7">
             <ExperienceSection title="projects" items={projectItems} />
           </div>
-          <div className="flex-1 max-w-md md:max-w-md  md:mt-14">
+          <div className="sm:flex-1 sm:max-w-md mt-7 sm:mt-14">
             <ExperienceSection title=""  items={workItems} />
           </div>
         </div>

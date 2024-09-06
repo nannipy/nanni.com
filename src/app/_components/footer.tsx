@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+
 
 
 const Footer = () => {
@@ -6,7 +8,7 @@ const Footer = () => {
     <div className="fixed bottom-0 right-0 p-4">
       <div className="flex flex-col items-center justify-center rounded-full bg-white p-2">
         <a href="/">
-        <img src="/logo_nb.png"   alt="logo" className="w-8 h-8" />
+        <Image src="/logo_nb.png"  alt="logo" width={8} height={8} />
         </a>
       </div>
     </div>
