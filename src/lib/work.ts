@@ -18,6 +18,13 @@ export const workItems = [
     description:
       "a web app to search for Rick and Morty characters with the ability to filter by gender, species, status, and type.",
   },
+  {
+    name: "all projects →",
+    github: "",
+    link: "https://github.com/nannipy",
+    position: "",
+    description: "",
+  },
   /*
   {
     name: "freelance developer",

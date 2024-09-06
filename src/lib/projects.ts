@@ -18,11 +18,5 @@ export const projectItems = [
       "a web app to search for Parco la Cascina, a farm located near Varese, Italy. You can find information about the farm, the animals, the activities and the events and order products.",
   },
 
-  {
-    name: "all projects →",
-    github: "",
-    link: "https://github.com/nannipy",
-    position: "",
-    description: "",
-  },
+  
 ] satisfies ExperienceItem[];
