@@ -157,15 +157,15 @@ export default async function Home() {
         </div>
       </div>
 
-      <ul className="font-sm my-2 flex flex-wrap gap-4 text-neutral-300">
+      <ul className="font-sm my-6 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-100"
+            className="flex  items-center transition-all hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
             href="mailto:gb.pernazza@gmail.com"
           >
-            <p className="mr-1 h-7">email</p>
+            <p className="mr-1 h-7 m">email</p>
             <UpRightArrowIcon />
           </a>
         </li>
@@ -187,7 +187,7 @@ export default async function Home() {
             target="_blank"
             href="https://github.com/nannipy"
           >
-            <p className="mr-1 h-7">github</p>
+            <p className="mr-1 h-7 ">github</p>
             <UpRightArrowIcon />
           </a>
         </li>
