@@ -1,6 +1,9 @@
 import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
+
+// Asseriamo che env sia di tipo Env
+
 export const env = createEnv({
   /**
    * Specify your server-side environment variables schema here. This way you can ensure the app
@@ -11,11 +14,11 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
-  },
 
+  },
   /**
-   * Specify your client-side environment variables schema here. This way you can ensure the app
-   * isn't built with invalid env vars. To expose them to the client, prefix them with
+   * Specifica qui lo schema delle variabili d'ambiente lato client. In questo modo puoi assicurarti che l'app
+   * non sia costruita con variabili d'ambiente non valide. Per esporle al client, aggiungici il prefisso
    * `NEXT_PUBLIC_`.
    */
   client: {
@@ -41,4 +44,6 @@ export const env = createEnv({
    * `SOME_VAR=''` will throw an error.
    */
   emptyStringAsUndefined: true,
+
+
 });

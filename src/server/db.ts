@@ -1,11 +1,19 @@
 import { PrismaClient } from "@prisma/client";
+import { env } from "../env.js";
 
-import { env } from "~/env";
+// Definiamo un tipo per env
+type Env = {
+  NODE_ENV: 'development' | 'production' | 'test';
+  // Aggiungi qui altre variabili d'ambiente se necessario
+};
+
+// Asseriamo che env sia di tipo Env
+const typedEnv = env as Env;
 
 const createPrismaClient = () =>
   new PrismaClient({
     log:
-      env.NODE_ENV === "development" ? ["query", "error", "warn"] : ["error"],
+      typedEnv.NODE_ENV === "development" ? ["query", "error", "warn"] : ["error"],
   });
 
 const globalForPrisma = globalThis as unknown as {
@@ -14,4 +22,4 @@ const globalForPrisma = globalThis as unknown as {
 
 export const db = globalForPrisma.prisma ?? createPrismaClient();
 
-if (env.NODE_ENV !== "production") globalForPrisma.prisma = db;
+if (typedEnv.NODE_ENV !== "production") globalForPrisma.prisma = db;

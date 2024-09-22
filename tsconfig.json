@@ -1,32 +1,33 @@
 {
   "compilerOptions": {
-    /* Base Options: */
+    "target": "es2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "target": "es2022",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "moduleDetection": "force",
-    "isolatedModules": true,
-
-    /* Strictness */
     "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "checkJs": true,
-
-    /* Bundled projects */
-    "lib": ["dom", "dom.iterable", "ES2022"],
-    "noEmit": true,
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
-    "plugins": [{ "name": "next" }],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "noEmit": true,
     "incremental": true,
-
-    /* Path Aliases */
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./src/*"]
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "typeRoots": ["./node_modules/@types", "./src/types"]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
     }
   },
   "include": [
@@ -37,6 +38,8 @@
     "**/*.cjs",
     "**/*.js",
     ".next/types/**/*.ts"
-  ],
-  "exclude": ["node_modules"]
+, "src/env.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -4,7 +4,7 @@ import type { ExperienceItem } from "../app/page";
 export const workItems = [
   {
     name: "portfolio website",
-    github: "https://github.com/nannipy/nanni-com",
+    github: "https://github.com/nannipy/nanni.com",
     link: "/",
     position: "",
     description:

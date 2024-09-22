@@ -11,14 +11,16 @@
 
 @font-face {
   font-family: 'Geist';
-  src: url('/fonts/Geist-Bold.otf') format('truetype');
+  src: url('/public/fonts/Geist-Bold.otf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 html {
   min-width: 360px;
+  src: url('/public/fonts/GeistMono-Regular.otf') format('truetype');
   font-family: 'Geist', sans-serif;
+
 }
 
 @media (prefers-color-scheme: dark) {

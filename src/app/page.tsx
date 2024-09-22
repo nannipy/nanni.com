@@ -2,6 +2,12 @@ import { projectItems } from "../lib/projects";
 import { workItems } from "../lib/work";
 
 
+
+
+
+
+
+
 function UpRightArrowIcon() {
   return (
     <svg
@@ -40,6 +46,8 @@ function GithubIcon() {
     </svg>
   );
 }
+
+
 
 function WorkIcon() {
   return (
@@ -140,10 +148,17 @@ function ExperienceSection({
 
 export default async function Home() {
   return (
+    
+
     <main className="flex min-h-screen flex-col justify-left mt-4 sm:mt-8 md:mt-16 text-white px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+
+ 
+      
       <h1 className="mb-4 text-xl sm:text-2xl font-bold tracking-tighter">
         giovanni battista pernazza        
       </h1>
+      
+ 
 
       <div className="flex flex-col gap-2 mb-4">
         <div className="flex items-center gap-2 text-neutral-300">
@@ -205,7 +220,7 @@ export default async function Home() {
       </ul>
 
       <p className="prose prose-neutral dark:prose-invert text-sm sm:text-base mt-4">
-        I&apos;m a software developer with a passion for building web applications. I&apos;m always looking for new challenges and opportunities to learn and grow.
+        I&apos;m a <b>software developer</b>  with a passion for building web applications. I&apos;m always looking for new challenges and opportunities to learn and grow.
       </p>
 
       <div className="prose prose-neutral dark:prose-invert text-sm sm:text-base py-2">
