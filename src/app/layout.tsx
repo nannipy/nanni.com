@@ -62,7 +62,7 @@ export default function RootLayout({
     <html lang="en" className="bg-black text-xl">
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/public/favicon.ico" />
       </head>
       <body className="bg-black ">
               {children}
