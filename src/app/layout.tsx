@@ -62,7 +62,11 @@ export default function RootLayout({
     <html lang="en" className="bg-black text-xl">
       <head>
         <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="public/favicon.ico" />
         <link rel="icon" href="/public/favicon.ico" />
+        <link rel="icon" href="%PUBLIC_URL%/logo512.png" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
       </head>
       <body className="bg-black ">
               {children}
