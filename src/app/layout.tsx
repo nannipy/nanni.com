@@ -52,40 +52,6 @@ export const metadata: Metadata = {
   },
 };
 
-export const icons = {
-  icon: {
-    rel: "icon",
-    type: "image/x-icon",
-    href: "/favicon.ico",
-  },
-  appleTouchIcon: {
-    rel: "apple-touch-icon",
-    sizes: "180x180",
-    href: "/apple-touch-icon.png",
-  },
-  manifest: {
-    name: "NanniPy",
-    short_name: "NanniPy",
-    description: "NanniPy - Portfolio webapp",
-    start_url: "/",
-    display: "standalone",
-    background_color: "#ffffff",
-    theme_color: "#000000",
-    icons: [
-      {
-        src: "/android-chrome-192x192.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-      {
-        src: "/icon-512x512.png",
-        sizes: "512x512",
-        type: "image/png",
-      },
-    ],
-  },
-
-}
 
 /*************  ✨ Codeium Command ⭐  *************/
 /******  9226ddea-dcb5-483a-b203-ffab58e76323  *******/export default function RootLayout({
