@@ -1,11 +1,5 @@
-import { projectItems } from "../lib/projects";
-import { workItems } from "../lib/work";
-
-
-
-
-
-
+import { projectItems } from "../lib/projects.ts";
+import { workItems } from "../lib/work.ts";
 
 
 function UpRightArrowIcon() {
@@ -108,37 +102,42 @@ function ExperienceSection({
 }) {
   return (
     <section className="text-left">
-      <h3 className="mb-6 text-xl font-medium justify-left">{title}</h3>
+      <h3 className="mb-6 text-xl font-medium">{title}</h3>
       {items.map((item, index) => (
-        <div key={index}>
-          {item.link ? (
-            <a
-              href={item.link}
-              target="_blank"
-              className=" font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
-            >
-              {item.name}
-            </a>
-          ) : (
-            <p className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600">
-              {item.name}
+        <div key={index} className="relative">
+          <div className="min-h-[140px]">
+            <div className="flex justify-between items-start gap-4">
+              {item.link ? (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <p className="font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600">
+                  {item.name}
+                </p>
+              )}
+              
+              {item.github && (
+                <a
+                  href={item.github}
+                  className="flex items-center transition-all hover:text-neutral-100"
+                >
+                  <GithubIcon />
+                  <p className="ml-2 h-7 underline decoration-wavy">git</p>
+                </a>
+              )}
+            </div>
+            
+            <p className="mt-2">{item.position}</p>
+            <p className="mt-2 text-neutral-700 dark:text-neutral-300">
+              {item.description}
             </p>
-          )}
+          </div>
           
-          <p className="mt-2">{item.position}</p>
-          <p className="mt-2 text-neutral-700 dark:text-neutral-300">
-            {item.description}
-          </p>
-          {item.github && (
-            <a
-              href={item.github}
-              target="_blank"
-              className="flex items-center transition-all hover:text-neutral-100"
-            >
-              < GithubIcon  />
-              <p className="ml-2 h-7  underline decoration-wavy"> git</p>
-            </a>
-          )}
           {index !== items.length - 1 && <div className="mt-6"></div>}
         </div>
       ))}
@@ -150,17 +149,17 @@ export default async function Home() {
   return (
     
 
-    <main className="flex min-h-screen flex-col justify-left mt-4 sm:mt-8 md:mt-16 text-white px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32">
+    <main className="flex min-h-screen flex-col justify-left mt-4 sm:mt-8 md:mt-5 text-white md:px-20 px-5 ">
 
  
       
-      <h1 className="mb-4 text-xl sm:text-2xl font-bold tracking-tighter">
-        giovanni battista pernazza        
+      <h1 className="mb-3 text-xl sm:text-2xl font-bold tracking-tighter">
+        Giovanni Battista Pernazza        
       </h1>
       
  
 
-      <div className="flex flex-col gap-2 mb-4">
+      <div className="flex flex-col gap-2 ">
         <div className="flex items-center gap-2 text-neutral-300">
           <LocationIcon />
           <p>Roma, Italia</p>
@@ -219,18 +218,24 @@ export default async function Home() {
         </li>
       </ul>
 
-      <p className="prose prose-neutral dark:prose-invert text-sm sm:text-base mt-4">
+      <p className=" text-sm sm:text-base">
         I&apos;m a <b>software developer</b>  with a passion for building web applications. I&apos;m always looking for new challenges and opportunities to learn and grow.
       </p>
 
-      <div className="prose prose-neutral dark:prose-invert text-sm sm:text-base py-2">
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="sm:flex-1 sm:max-w-md mt-7">
-            <ExperienceSection title="projects" items={projectItems} />
+      <div className="">
+        <div className="flex flex-col sm:flex-row gap-10">
+          <div className="sm:flex-1 sm:max-w-md mt-7 ">
+            <ExperienceSection title="Last Projects" items={projectItems} />
           </div>
           <div className="sm:flex-1 sm:max-w-md mt-7 sm:mt-14">
             <ExperienceSection title=""  items={workItems} />
           </div>
+        </div>
+        <div>
+          <a href="https://github.com/nannipy" className=" font-medium underline decoration-neutral-400 decoration-[0.1em] underline-offset-2 dark:decoration-neutral-600 flex mt-1">
+              <p>Scopri tutti i miei progetti su github</p>
+              <UpRightArrowIcon />
+            </a>
         </div>
       </div>
     </main>

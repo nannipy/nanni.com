@@ -1,29 +1,22 @@
-import type { ExperienceItem } from "../app/page";
+import type { ExperienceItem } from "../app/page.tsx";
 
 
 export const workItems = [
   {
-    name: "portfolio website",
+    name: "Sapienza Foiling Team",
+    github: "https://github.com/nannipy/sapienza-foiling-team",
+    link: "https://sapienzafoilingteam.vercel.app",
+    position: "",
+    description:
+      "a web app for the Sapienza foiling team, a student association at the University of Rome. You can find information about the team, the activities and the events.",
+  },
+  {
+    name: "Portfolio website",
     github: "https://github.com/nannipy/nanni.com",
     link: "/",
     position: "",
     description:
-      "the web app you're looking at right now, built with nextjs, tailwindcss, trpc and supabase. It's very simple but i love it ",
-  },
-  {
-    name: "Rick and Morty Search",
-    github: "https://github.com/nannipy/RickandMortySearch",
-    link: "https://rickandmortysearchcharacter.netlify.app/",
-    position: "",
-    description:
-      "a web app to search for Rick and Morty characters with the ability to filter by gender, species, status, and type.",
-  },
-  {
-    name: "all projects →",
-    github: "",
-    link: "https://github.com/nannipy",
-    position: "",
-    description: "",
+      "the web app you're looking at right now, built with nextjs, tailwindcss, trpc and supabase. It's very simple but i love it <3",
   },
   /*
   {

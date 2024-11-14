@@ -1,12 +1,6 @@
 import "../styles/globals.css";
 import { type Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import { clx } from "../app/utils";
-import Footer from "./_components/footer";
-import { TRPCReactProvider } from "../trpc/react";
-import AuthProvider from "./_components/AuthProvider";
-import ClientOnly from "./_components/ClientOnly";
+import Footer from "../components/Footer.jsx";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nannipy.vercel.app"),
@@ -22,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Giovanni Battista Pernazza",
     locale: "en_US",
     type: "website",
-    images: ["https://nannipy.vercel.app"],
+    images: ["https://nannipy.vercel.app/favicon.ico"],
   },
   robots: {
     index: true,
@@ -60,15 +54,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={clx(GeistSans.className, GeistMono.className, "bg-black")}>
-      <body className="bg-black font-face md:px-40">
-        <ClientOnly>
-          <AuthProvider>
-            <TRPCReactProvider>
+    <html lang="en" className="bg-black text-xl">
+      <body className="bg-black ">
               {children}
-            </TRPCReactProvider>
-          </AuthProvider>
-        </ClientOnly>
         <Footer />
       </body>
     </html>
