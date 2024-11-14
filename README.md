@@ -1,29 +1,70 @@
-# Create T3 App
+# Giovanni Battista Pernazza - Personal Portfolio
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Un'applicazione web creata con Next.js e TypeScript per mostrare il mio portfolio di progetti e le esperienze lavorative. La web app include animazioni fluide e una sezione terminal per un effetto di scrittura, che aggiunge un tocco dinamico e interattivo alla mia presentazione.
 
-## What's next? How do I make an app with this?
+## Funzionalità
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- **Typing Effect**: Un effetto di scrittura automatica per introdurre il mio nome e la descrizione.
+- **Icone interattive**: Icone animate per link social e progetti.
+- **Sezioni Esperienza e Progetti**: Mostra progetti personali e le esperienze lavorative con dettagli aggiuntivi.
+- **Interattività e Transizioni**: Animazioni di hover e transizioni per un'esperienza fluida.
+  
+## Tecnologie
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- **Next.js**
+- **TypeScript**
+- **React.js**
+- **Tailwind CSS** per la gestione dello stile
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Struttura dei file principali
 
-## Learn More
+- `pages/index.tsx`: Componente principale della homepage.
+- `components/TypingEffect.tsx`: Componente per l'effetto di scrittura automatica.
+- `lib/projects.ts` e `lib/work.ts`: Dati per i progetti e le esperienze lavorative.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+## Requisiti
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+- **Node.js**: Versione 14 o superiore
+- **Yarn** o **npm**
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## Installazione
 
-## How do I deploy this?
+1. Clona il repository:
+   ```bash
+   git clone https://github.com/nannipy/nome-del-repository.git
+   cd nome-del-repository
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+2.	Installa le dipendenze:
+   ```bash
+    npm install
+    # oppure
+    yarn install
+
+3.	Avvia l’applicazione in modalità sviluppo:
+   ```bash
+   npm run dev
+   # oppure
+   yarn dev
+       
+4.	Apri il browser e visita http://localhost:3000 per vedere l’app in azione.
+
+## Scripts
+
+	dev: Avvia l’app in modalità sviluppo.
+	•	build: Compila il progetto per la produzione.
+	•	start: Avvia il server in modalità produzione.
+
+## Deployment
+
+L’applicazione può essere facilmente distribuita su piattaforme come Vercel o Netlify. La configurazione Next.js è già pronta per essere distribuita senza necessità di modifiche.
+
+## Contatti
+
+Per maggiori informazioni, puoi contattarmi tramite:
+	•	Email: gb.pernazza@gmail.com
+	•	LinkedIn: linkedin.com/in/giovannibpernazza
+	•	GitHub: nannipy
+
+## Licenza
+
+Questo progetto è distribuito sotto la licenza MIT. Vedi il file LICENSE per maggiori dettagli.
