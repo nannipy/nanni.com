@@ -9,12 +9,12 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 export const metadata: Metadata = {
   metadataBase: new URL("https://nannipy.vercel.app"),
   title: {
-    default: "Giovanni Battista Pernazza",
+    default: "Nannipy - Portfolio",
     template: "%s | Giovanni Battista Pernazza",
   },
   description: "Giovanni Battista Pernazza: Developer, Software Engineer, Entrepreneur",
   openGraph: {
-    title: "Giovanni Battista Pernazza",
+    title: "NanniPy - Portfolio",
     description: "Developer, Software Engineer, Entrepreneur",
     url: "https://nannipy.vercel.app",
     siteName: "Giovanni Battista Pernazza",
