@@ -2,7 +2,6 @@ import "../styles/globals.css";
 import { type Metadata } from "next";
 import Footer from "../components/Footer.jsx";
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/react";
 
 
 
@@ -53,25 +52,59 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export const icons = {
+  icon: {
+    rel: "icon",
+    type: "image/x-icon",
+    href: "/favicon.ico",
+  },
+  appleTouchIcon: {
+    rel: "apple-touch-icon",
+    sizes: "180x180",
+    href: "/apple-touch-icon.png",
+  },
+  manifest: {
+    name: "NanniPy",
+    short_name: "NanniPy",
+    description: "NanniPy - Portfolio webapp",
+    start_url: "/",
+    display: "standalone",
+    background_color: "#ffffff",
+    theme_color: "#000000",
+    icons: [
+      {
+        src: "/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        src: "/icon-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+  },
+
+}
+
+/*************  ✨ Codeium Command ⭐  *************/
+/******  9226ddea-dcb5-483a-b203-ffab58e76323  *******/export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
+    
     <html lang="en" className="bg-black text-xl">
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="public/favicon.ico" />
-        <link rel="icon" href="/public/favicon.ico" />
-        <link rel="icon" href="%PUBLIC_URL%/logo512.png" />
-        <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" href="public/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <meta name="theme-color" content="#000000" />
       </head>
       <body className="bg-black ">
               {children}
               <Analytics />
-              <SpeedInsights />
         <Footer />
       </body>
     </html>
