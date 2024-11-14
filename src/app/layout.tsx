@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://nannipy.vercel.app"),
   title: {
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
     images: ["https://nannipy.vercel.app/favicon.ico"],
+    
   },
   robots: {
     index: true,
@@ -58,6 +60,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-black text-xl">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className="bg-black ">
               {children}
               <Analytics />

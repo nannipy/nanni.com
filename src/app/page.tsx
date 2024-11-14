@@ -185,6 +185,7 @@ export default function Home() {
   if (!mounted) return null;
 
   return (
+    
     <main className="flex min-h-screen flex-col justify-left mt-4 sm:mt-8 md:mt-5 text-white md:px-20 px-5 animate-fadeIn">
       <h1 className="mb-3 text-xl sm:text-2xl font-bold tracking-tighter">
         <TypingEffect text="Giovanni Battista Pernazza" speed={70} />
