@@ -1,6 +1,9 @@
 import "../styles/globals.css";
 import { type Metadata } from "next";
 import Footer from "../components/Footer.jsx";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nannipy.vercel.app"),
@@ -57,6 +60,8 @@ export default function RootLayout({
     <html lang="en" className="bg-black text-xl">
       <body className="bg-black ">
               {children}
+              <Analytics />
+              <SpeedInsights />
         <Footer />
       </body>
     </html>
